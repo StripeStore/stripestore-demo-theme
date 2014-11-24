@@ -21,8 +21,10 @@
     </head>
     <body>
         
-        
-
+        <% include Navigation %>
+            
+        $Form
+	
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 4
             Use Google's CDN version and fallback to local version if necessary -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
