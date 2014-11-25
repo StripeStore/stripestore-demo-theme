@@ -23,6 +23,7 @@
         
         <% include Navigation %>
             
+        $Layout
         $Form
 	
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 4
