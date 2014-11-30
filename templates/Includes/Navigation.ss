@@ -14,20 +14,22 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <% loop Menu(1) %>
-                    <% if Children %>
-                        <li class="dropdown $LinkingMode">
-                            <a href="$Link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$MenuTitle <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <% loop Children %>
-                                    <li><a href="$Link">$MenuTitle</a></li>
-                                <% end_loop %>
-                            </ul>
-                        </li>
-                    <% else %>
-                        <li><a href="$Link">$MenuTitle</a></li>
-                    <% end_if %>
-                <% end_loop %>
+                <% with Page(Categories) %>
+                    <% loop Children %>
+                        <% if Children %>
+                            <li class="dropdown $LinkingMode">
+                                <a href="$Link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$MenuTitle <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <% loop Children %>
+                                        <li><a href="$Link">$MenuTitle</a></li>
+                                    <% end_loop %>
+                                </ul>
+                            </li>
+                        <% else %>
+                            <li><a href="$Link">$MenuTitle</a></li>
+                        <% end_if %>
+                    <% end_loop %>
+                <% end_with %>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
