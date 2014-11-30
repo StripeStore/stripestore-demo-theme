@@ -22,9 +22,10 @@
     <body>
         
         <% include Navigation %>
-            
-        $Layout
-        $Form
+        <div class="container">
+            $Layout
+            $Form
+        </div>
 	
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 4
             Use Google's CDN version and fallback to local version if necessary -->
