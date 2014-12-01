@@ -31,17 +31,17 @@
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Pesquisar">
                 </div>
-                <button type="submit" class="btn btn-default">Search</button>
+                <button type="submit" class="btn btn-default">Pesquisar</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <% if $CurrentMember %>
-                    <li><a href="#">Signed in as $CurrentMember.Name</a></li>
-                    <li><a href="Security/logout">Sign Out</a></li>
+                    <li><a href="carrinho-de-compras">Carrinho de Compras</a></li>
+                    <li><a href="Security/logout">Sair</a></li>
                 <% else %>
-                    <li><a href="Security/login">Sign In</a></li>
-                    <li><a href="sign-up">Sign Up</a></li>
+                    <li><a href="Security/login">Entrar</a></li>
+                    <li><a href="sign-up">Inscreva-se</a></li>
                 <% end_if %>
             </ul>
         </div><!-- /.navbar-collapse -->
