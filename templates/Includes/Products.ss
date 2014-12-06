@@ -2,22 +2,31 @@
 
 	<% include Pagination %>
 
-	<div class="row">
-		<% loop Products %>
-            <div class="col-xs-12 col-md-4">
-                <a href="$Link">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">$Title.XML</h3>
+	<div class="row invisible-xs">
+		<% loop Children %>
+            <% if ClassName=Product %>
+                <div class="col-sm-5 col-md-4">
+                    <a href="$Link">
+                        <div  id="product-pane">
+                            <div class="col-xs-12">
+                                <% loop OrderedImages %>
+                                    <% if $First %>
+                                        <img src="$Link" class="img-responsive" alt="Responsive image">
+                                    <% end_if %>
+                                <% end_loop %>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5>$Title.XML</h5>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5><bold>$Price.Nice</bold></h5>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            $Price.Nice
-                        </div>
-                    </div>
-                </a>
-            </div>			
+                    </a>
+                </div>
+            <% end_if %>
 		<% end_loop %>
-	
+    </div>
 	
 	<% include Pagination %>
 

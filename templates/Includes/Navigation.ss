@@ -30,10 +30,12 @@
                 <% end_loop %>
             </ul>
             <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
+                <div class="input-group">
                     <input type="text" class="form-control" placeholder="Pesquisar">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Pesquisar</button>
+                    </span>
                 </div>
-                <button type="submit" class="btn btn-default">Pesquisar</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <% if $CurrentMember %>

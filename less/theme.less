@@ -1,3 +1,46 @@
+#footer-nav {
+    margin-top: 35px;
+    
+    * {
+        .transition(all .65s);
+    }
+    h1 {
+        font-size: 16px;
+        text-align: center;
+        color: @gray;
+    }
+        
+    h1:after {
+        content:' ';
+        display:block;
+        border:1px solid gray;
+    }
+    ul {
+        list-style: none;
+        font-size: 12px;
+    }
+    a {
+        color: @gray;
+        &:hover {
+            color: @gray-darker;
+            text-decoration: none;
+        }
+    }
+}
+
+#product-pane {
+    min-height: 205px;
+    
+    .transition(transform .2s);
+    
+    &:hover {
+        .scale(1.025);   
+    }
+}
+
+#ProductCage {
+    margin-bottom: 20px;
+}
 
 //
 // Load core variables and mixins
