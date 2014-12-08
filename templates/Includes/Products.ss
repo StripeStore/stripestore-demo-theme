@@ -2,7 +2,7 @@
 
 	<% include Pagination %>
 
-	<div class="row invisible-xs">
+	<div class="row">
 		<% loop Children %>
             <% if ClassName=Product %>
                 <div class="col-sm-5 col-md-4">

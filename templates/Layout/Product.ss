@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-sm-8 pagination-centered">
         <% loop OrderedImages %>
             <% if $First %>
-                <img src="$Link" class="img-responsive" alt="Responsive image">
+                <img src="$Link" class="img-responsive center-block" alt="Responsive image">
             <% end_if %>
         <% end_loop %>
     </div>
@@ -60,7 +60,7 @@
                     <% loop OrderedImages %>
                         <% if $First %>
                         <% else %>
-                            <img src="$Link" class="img-responsive" alt="Responsive image">
+                            <img src="$Link" class="img-responsive center-block" alt="Responsive image">
                         <% end_if %>
                     <% end_loop %>
                 </div>
